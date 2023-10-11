@@ -9,7 +9,7 @@ packages = [{include = "rdklib_debugging"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-rdklib = "0.3.2"
+rdklib = {git = "https://github.com/bbc/aws-config-rdklib.git", rev = "issue-68"}
 aws-lambda-powertools = "^2.25.1"
 
 
