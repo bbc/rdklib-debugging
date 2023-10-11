@@ -9,7 +9,7 @@ packages = [{include = "rdklib_debugging"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-rdklib = "0.3.0"
+rdklib = "0.3.2"
 aws-lambda-powertools = "^2.25.1"
 
 
