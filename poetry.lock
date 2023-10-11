@@ -211,7 +211,7 @@ rdk = "^0.17"
 type = "git"
 url = "https://github.com/bbc/aws-config-rdklib.git"
 reference = "issue-68"
-resolved_reference = "17541ea8031480c20500b556d1619ae4c0444f02"
+resolved_reference = "30b5cbee5b03a0159b1d3245eb2bbdecf7646602"
 
 [[package]]
 name = "s3transfer"
