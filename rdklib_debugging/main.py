@@ -27,7 +27,7 @@ class ConfigRules(ConfigRule):
 
         evaluation = Evaluation(
             complianceType=ComplianceType.COMPLIANT,
-            resourceId='test-cloudeng-automated-policy-manager',
+            resourceId='my-test-role',
             resourceType='AWS::IAM::Role',
             annotation='rdklib debugging'
         )
