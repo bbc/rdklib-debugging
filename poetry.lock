@@ -158,20 +158,20 @@ pyyaml = ">=6.0,<7.0"
 
 [[package]]
 name = "rdklib"
-version = "0.3.3"
+version = "0.3.0"
 description = "Rule Development Kit Library for AWS Config"
 category = "main"
 optional = false
-python-versions = ">=3.7.2,<4.0.0"
+python-versions = "*"
 files = [
-    {file = "rdklib-0.3.3-py3-none-any.whl", hash = "sha256:d4614b17c098d9558d5033b4252d521c14205fce6a72a83c3fbf4c7a781f2e23"},
-    {file = "rdklib-0.3.3.tar.gz", hash = "sha256:c2d4841d5c736cfeaef26941af8ddbe1e167670f4a5dfe2afbaf48c6eb6bc94e"},
+    {file = "rdklib-0.3.0-py3-none-any.whl", hash = "sha256:6529bca814c0beb4651a88c996c249b337ee9dfa4fea122da39b79d17b37e4b4"},
+    {file = "rdklib-0.3.0.tar.gz", hash = "sha256:bda412ae57c97c0f6bf0d315ee5d07552c38e43555aaad561c35dd1e470c8093"},
 ]
 
 [package.dependencies]
-boto3 = ">=1.26.139,<2.0.0"
-pyyaml = ">=6.0,<7.0"
-rdk = ">=0.17,<0.18"
+boto3 = "*"
+botocore = "*"
+rdk = "*"
 
 [[package]]
 name = "s3transfer"
@@ -236,4 +236,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "6370bd7a18f02a6ede17f640540c4f6dc3168cfc73a9960b73155772e739da17"
+content-hash = "b16f3502dac8db0fe3a21c499242a971e31def747071d94fb87efe4e93b5abdf"
