@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "rdklib-debugging"
+version = "0.1.0"
+description = "CLOUDENG-1969"
+authors = ["BBC <cloudeng@bbc.co.uk>"]
+license = "UNLICENSED"
+readme = "README.md"
+packages = [{include = "rdklib_debugging"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
