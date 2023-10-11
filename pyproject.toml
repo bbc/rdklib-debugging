@@ -11,6 +11,7 @@ packages = [{include = "rdklib_debugging"}]
 python = "^3.11"
 rdklib = {git = "https://github.com/bbc/aws-config-rdklib.git", rev = "issue-68"}
 aws-lambda-powertools = "^2.25.1"
+pytz = "^2023.3.post1"
 
 
 [build-system]

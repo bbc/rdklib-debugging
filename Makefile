@@ -15,3 +15,11 @@ package: clean env
 	( \
 		bash scripts/package.sh \
 	)
+
+run:
+	( \
+		export PATH="${HOME}/.poetry/bin:${PATH}" && \
+		export AWS_PROFILE=cloudeng-test-account-dev-engineer && \
+		export AWS_REGION=us-east-1 && \
+		poetry run python run.py \
+	)

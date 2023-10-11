@@ -1,0 +1,29 @@
+from dataclasses import dataclass
+
+from rdklib_debugging import main
+
+def lambda_context():
+    @dataclass
+    class LambdaContext:
+        function_name = "alex-testing-rdklib"
+        memory_limit_in_mb = 128
+        invoked_function_arn = "arn:aws:lambda:eu-west-1:111111111111:function:alex-testing-rdklib"
+        aws_request_id = "da658bd3-2d6f-4e7b-8ec2-937234644fdc"
+
+    return LambdaContext()
+
+event = {
+    "version": "1.0",
+    "invokingEvent": "{\"awsAccountId\":\"888415891951\",\"notificationCreationTime\":\"2023-10-11T11:40:48.032Z\",\"messageType\":\"ScheduledNotification\",\"recordVersion\":\"1.0\"}",
+    "ruleParameters": "{\"ExecutionRoleName\":\"alex-testing-rdklib-execution-role\"}",
+    "resultToken": "eyJlbmNyeXB0ZWREYXRhIjpbLTYwLC05OCwxMiwxMDEsLTQ0LDEwOCw3MiwzNCwtNjYsLTQ5LDkyLC04Myw0MSwtODksODgsMjcsOTcsNzcsLTIsODcsMTA5LC0xMDcsNTQsLTgsLTU0LDEwMywtNzQsNjcsOTcsMTIzLC00Nyw5MSwtMTI2LDQxLC04MiwtMTEsMjMsNDksMzYsLTUsLTMxLDUsLTExNSwxMTQsLTEyMywtOTQsMTYsNDksMTMsMTEsNzgsLTEyMCwzMywtNzQsLTY5LDcxLDMzLC04MSwtNDksMTA2LDg3LDMwLDk4LC02NywtMTgsLTM2LDY0LDU5LC02OSw1MCwtMjMsLTY3LC0yOCwzMiw0MywxMTIsLTIwLC0yLC0xMjgsODgsLTEsODgsLTM0LC0xMjMsOTgsNjAsMTAxLDUyLC01MiwxMDIsMTA1LDQ0LC02NSwxMjUsLTc0LC05MSwxMDksLTEwNyw0NywtMTI2LDEwNiwxOSwzMCw2LDQyLDEwMSwtMzEsOTcsMjUsLTExMywtMTEzLC0xMjQsMTUsNjIsMywtNiwyMSw3NiwzMCw5LDczLDEyNSwzNSw0NCwtNTQsLTQxLDEwMCwxNCwtOTMsLTI0LC01LC0xMTQsLTQ5LC02MiwtOTksLTEwNiw1LC0xOCw2MywtMzAsLTEwLC04NSwtMTIsNzgsMTE5LDUwLC05OSwtMTIyLC02NSw1OCwtNzcsMTI0LDcyLC03OCwwLDczLDk4LC01NSw2OCwxMDgsLTgsOTMsMTAxLC0xMDcsNzUsLTEwLC01NSwtOTMsLTEyMSw0NCwtOTksLTk3LDg2LDEwNyw5Niw5NCwtMTIwLDk2LC00NCwxMTgsLTgyLDExNCwxMywtMTAsMjAsOTMsLTcwLC0yMCwtMyw2NCw2OCwtNzUsLTQ5LC0zNywzMCwzMSwzLC0xMTIsMTIzLC0xMjQsLTQzLDczLC04OCwtMTI1LDg2LC0yMiw4OCwtNDYsLTM1LC00MCwtMjYsOTIsLTI3LDMwLC05MywtMywxLC00OSwtNjYsLTgwLDgyLC0xMjYsMzAsMTYsLTQ1LDEyNiwtMzEsMzQsMTIyLC00NiwtNjAsOTQsLTEwNiw2MywxMDksLTUwLC00OSwtODgsLTM1LC01NCw0LC02NywtNjEsMzIsNjMsLTEwNSwtMTA4LDExOSwtMzAsNzAsMzgsLTU4LDY0LC0xNiw5MCwtNjMsNjEsLTQ4LDI3LDg2LC01MywtMTA2LC0xMjAsMTE2LC02Myw5NiwtNDcsLTE3LC0xMTMsLTQwLC01MCwtMzEsLTIyLDgwLDExOCwtNTcsOTEsLTExMywyOCwzMSwxMiwtMTI0LC04NCwtNjMsLTY0LDkyLDQ2LDEyLDg3LDEyLDksOTksLTY4LDcyLDExNSwtMTIwLC00Niw2NCwxMDIsMzMsLTI2LDI0LDMyLC0zNiw3MCwtNzYsMzgsLTI5LC01Nyw5NCwtOTYsLTM0LC0xMDAsLTYwLC0xMCwtMyw4NCwxMDAsODcsNzAsODksNiwtNzksNzUsMTA0LDg1LDEyNCwtNDUsLTMwLC0zOSw2NiwxMjMsLTE0LDM5LDMxLC01OSw0NCwtNzcsLTczLDE1LC0xMTgsNjgsNjQsNTIsLTc1LDEyNyw4NCwtMTA5LC02OSwtMTAzLC0zMSwxNywxMDEsNTIsLTEwNiwtMTI0LC04Nyw5MCwxMDgsMjMsLTI1LDg3LC03NiwtNjIsMzYsOTMsLTY2LDc3LDU1LC04LC0xMCwzNCwxMDksMTE1LDE0LC05MCw1LDc3LDExMSwtNjEsNDIsLTM5LDIxLDExMiwtNDIsLTExNiwtMzMsLTY5LC0xMCwxMTksNTEsMjQsNDcsLTg4LDg5LC0xLC00NiwtMTE2LC0zLDEwMCw0NCwyMCwtMTE0LC0xNywyMSwtNTAsLTEwNCwtMTIsLTc4LDc4LC00MCwtMTE3LDM2LC05MCwtMzksLTgyLC04NiwxMDIsMjUsNzIsLTc5LC0xMjAsMywtMSwxMDUsMTIzLC0xMjgsLTExNyw1MCw3Myw2NCwtMjEsLTEwMywxMjAsLTksNzYsNDEsNTcsLTc1LC0xMjEsMjNdLCJtYXRlcmlhbFNldFNlcmlhbE51bWJlciI6MSwiaXZQYXJhbWV0ZXJTcGVjIjp7Iml2IjpbNTIsNTQsMTA4LDE3LDQwLC00NywzOCwxMDAsLTUzLC0xMjcsMzksMTE5LC0xMCwtMTQsLTI4LDc3XX19",
+    "eventLeftScope": False,
+    "executionRoleArn": "arn:aws:iam::888415891951:role/AWSConfigRole-us-east-1",
+    "configRuleArn": "arn:aws:config:us-east-1:888415891951:config-rule/config-rule-f1yklb",
+    "configRuleName": "alex-testing-rdklib",
+    "configRuleId": "config-rule-f1yklb",
+    "accountId": "888415891951",
+    "evaluationMode": "DETECTIVE"
+}
+
+main.handler(event, lambda_context())
