@@ -1,4 +1,4 @@
-.PHONY: clean env test package
+.PHONY: clean env package
 
 clean:
 	rm -rf package.zip
@@ -11,7 +11,7 @@ env:
 		poetry install \
 	)
 
-package: clean env test
+package: clean env
 	( \
-		bash ci/scripts/package.sh \
+		bash scripts/package.sh \
 	)
